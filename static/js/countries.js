@@ -46,7 +46,6 @@ $(document).ready(function() {
 	$('#countries-table tbody').on('click', 'td.a', 'tr', function(event) {
 
 		event.preventDefault();
-		alert('lala')
 		var data = table.row($(this)).data();
 		var result = [];
 		for (var key in list) {
@@ -83,7 +82,6 @@ $(document).ready(function() {
 	var searchFun = function(){
 		var index =parseInt($('#columnSel').val(),10);
 		var sVal =$('#searchBox').val();
-		alert(index)
 		if (index>0){
 			table
 				.column(index)
