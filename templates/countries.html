@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Datatables -->
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<meta name="description" content="Frontend Assessment - Countries Table" />
+<meta name="author" content="Yasmin Femerling" />
+<title>Countries Table</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<h3>Frontend Assessment</h3>
+	</nav>
+	<div class="m-3">
+		<div class="row m-3">
+			<div class="col-2">
+			<label for="columnSel">Column Filtering:</label>
+			</div>
+			<div class="col-3">
+				<select id="columnSel">
+					<option value="">---Select a Column---</option>
+					<option value="0">Official Name</option>
+					<option value="1">Capital</option>
+					<option value="2">Region</option>
+					<option value="3">Languages</option>
+					<option value="4">Population</option>
+					<option value="5">Flag</option>
+				</select>
+			</div>
+			<div class="col-4">
+				<button type="button" id="searchBtn" class="btn btn-primary">Search</button>
+			</div>
+		</div>
+		<div class="row m-3">
+			<div class="col-2">
+			</div>
+			<div class="col-2">
+				<input id="searchBox" placeholder="Filter...">
+			</div>
+		</div>
+		<div class="card bg-light border-secundary">
+			<button class="btn btn-primary float-right" type="button"
+				id="loadCols">
+				Load Columns<i class="ml-2" data-feather="search"></i>
+			</button>
+			<button class="btn btn-primary float-right" type="button"
+				disabled hidden="true" id="reloadingCols">
+				<span class="spinner-border spinner-border-sm"
+					role="status" aria-hidden="true"></span> Loading...
+			</button>
+			<table id="countries-table" class="table table-hover table-striped"
+				style="width: 80%">
+				<thead>
+					<tr>
+						<th>Official Name</th>
+						<th>Capital</th>
+						<th>Region</th>
+						<th>Languages</th>
+						<th>Population</th>
+						<th>Flag</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	<!-- jQuery first, then Popper.js, then Bootstrap JS, then Datatables JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" charset="utf8"
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+	<script type="text/javascript" charset="utf8"
+		src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" charset="utf8"
+		src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+	<!-- JavaScript -->
+	<script src="../static/js/countries.js"></script>
+</body>
+</html>
